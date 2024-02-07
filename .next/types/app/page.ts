@@ -1,4 +1,4 @@
-// File: P:\MMI\S4\R4.06 React\React-master\JSX\Exo1\app\page.js
+// File: P:\MMI\S4\R4.06 React\R4.06---Tic-Tac-Toe\app\page.js
 import * as entry from '../../../app/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
