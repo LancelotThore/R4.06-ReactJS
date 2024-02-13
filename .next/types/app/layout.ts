@@ -1,4 +1,4 @@
-// File: P:\MMI\S4\R4.06 React\React-master\JSX\Exo1\app\layout.js
+// File: C:\Users\thore2\Documents\GitHub\ReactJS\app\layout.js
 import * as entry from '../../../app/layout.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
