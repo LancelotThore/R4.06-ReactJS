@@ -1,9 +1,5 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './css/base.css';
+// import { useState } from 'react'
 import Pricing from "./component/Pricing";
-
 
 function App() {
 
@@ -13,7 +9,11 @@ function App() {
       "Découvrez l'avenir de la mobilité avec des prix compétitifs et des options d'achat flexibles chez Auto Innovation.",
     plans: [
       {
-        label: "Starter Package", price: "29 999.99",
+        label: "Starter Package",
+        price: {
+          leasing: 299.99,
+          buy: 29999.99
+        },
         advantages: [
           { text: "Assurance auto complémentaire", check: true},
           { text: "Première recharge offerte",  check: true},
@@ -29,7 +29,10 @@ function App() {
       },
       {
         label: "Premium Package",
-        price: "35 999.99",
+        price: {
+          leasing: 359.99,
+          buy: 35999.99
+        },
         advantages: [
           { text: "Assurance auto complémentaire", check: true},
           { text: "Première recharge offerte",  check: true},
@@ -45,7 +48,10 @@ function App() {
       },
       {
         label: "Prestige Package",
-        price: "49 999.99",
+        price: {
+          leasing: 499.99,
+          buy: 49999.99
+        },
         advantages: [
           { text: "Assurance auto complémentaire", check: true},
           { text: "Première recharge offerte",  check: true},
@@ -62,9 +68,13 @@ function App() {
     ],
   };
 
+  let cb_buy = function() {
+    alert("merci pour votre achat")
+  }
+
   return (
     <>
-      <Pricing {...data}/>
+      <Pricing {...data/*, cb_buy*/}/>
     </>
   )
 }

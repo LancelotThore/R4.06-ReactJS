@@ -8,7 +8,8 @@ function Item({text, check}) {
     );
 }
 
-export default function Plan({label, price, advantages}) {
+export default function Plan({label, price, advantages, handler}) {
+
     return (
         <div className="offer-box">
             <div className="offer-box__header">
@@ -20,7 +21,7 @@ export default function Plan({label, price, advantages}) {
                     <Item key={index} text={item.text} check={item.check}/>
                 ))}
             </ul>
-            <button className="header__btuton btn--hero__nav">Get Started</button>
+            <button onClick={handler} className="header__btuton btn--hero__nav">Get Started</button>
         </div>
     )
 }
