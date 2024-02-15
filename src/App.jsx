@@ -1,68 +1,80 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './css/base.css';
+// import { useState } from 'react'
+import Pricing from "./component/Pricing";
 
 function App() {
 
   let data = {
     title: "Prix et option à l'achat",
-    subtitle:
+    description:
       "Découvrez l'avenir de la mobilité avec des prix compétitifs et des options d'achat flexibles chez Auto Innovation.",
-    prices: [
+    plans: [
       {
-        title: "Starter Package",
-        price: "29 999.99",
+        label: "Starter Package",
+        price: {
+          leasing: 299.99,
+          buy: 29999.99
+        },
         advantages: [
-          { included: true, option: "Assurance auto complémentaire" },
-          { included: true, option: "Première recharge offerte" },
-          { included: true, option: "Assurance contre le vol" },
-          { included: true, option: "Service de rappel d'entretien" },
-          { included: false, option: "Nettoyage hebdomadaire" },
-          { included: false, option: "Service de diagnostic à distance" },
-          { included: false, option: "Service de remplissage du réservoir" },
-          { included: false, option: "Service de réparation à domicile" },
-          { included: false, option: "Entretien régulier" },
-          { included: false, option: "Recharge d'hydrogène illimité" },
+          { text: "Assurance auto complémentaire", check: true},
+          { text: "Première recharge offerte",  check: true},
+          { text: "Assurance contre le vol", check: true},
+          { text: "Service de rappel d'entretien", check: true},
+          { text: "Nettoyage hebdomadaire", check: false },
+          { text: "Service de diagnostic à distance", check: false},
+          { text: "Service de remplissage du réservoir", check: false},
+          { text: "Service de réparation à domicile", check: false},
+          { text: "Entretien régulier", check: false},
+          { text: "Recharge d'hydrogène illimité", check: false},
         ],
       },
       {
-        title: "Prenium Package",
-        price: "35 999.99",
+        label: "Premium Package",
+        price: {
+          leasing: 359.99,
+          buy: 35999.99
+        },
         advantages: [
-          { included: true, option: "Assurance auto complémentaire" },
-          { included: true, option: "Première recharge offerte" },
-          { included: true, option: "Assurance contre le vol" },
-          { included: true, option: "Service de rappel d'entretien" },
-          { included: true, option: "Nettoyage hebdomadaire" },
-          { included: true, option: "Service de diagnostic à distance" },
-          { included: true, option: "Service de remplissage du réservoir" },
-          { included: false, option: "Service de réparation à domicile" },
-          { included: false, option: "Entretien régulier" },
-          { included: false, option: "Recharge d'hydrogène illimité" },
+          { text: "Assurance auto complémentaire", check: true},
+          { text: "Première recharge offerte",  check: true},
+          { text: "Assurance contre le vol", check: true},
+          { text: "Service de rappel d'entretien", check: true},
+          { text: "Nettoyage hebdomadaire", check: false },
+          { text: "Service de diagnostic à distance", check: true},
+          { text: "Service de remplissage du réservoir", check: true},
+          { text: "Service de réparation à domicile", check: false},
+          { text: "Entretien régulier", check: false},
+          { text: "Recharge d'hydrogène illimité", check: false},
         ],
       },
       {
-        title: "Prestige Package",
-        price: "49 999.99",
+        label: "Prestige Package",
+        price: {
+          leasing: 499.99,
+          buy: 49999.99
+        },
         advantages: [
-          { included: true, option: "Assurance auto complémentaire" },
-          { included: true, option: "Première recharge offerte" },
-          { included: true, option: "Assurance contre le vol" },
-          { included: true, option: "Service de rappel d'entretien" },
-          { included: true, option: "Nettoyage hebdomadaire" },
-          { included: true, option: "Service de diagnostic à distance" },
-          { included: true, option: "Service de remplissage du réservoir" },
-          { included: true, option: "Service de réparation à domicile" },
-          { included: true, option: "Entretien régulier" },
-          { included: true, option: "Recharge d'hydrogène illimité" },
+          { text: "Assurance auto complémentaire", check: true},
+          { text: "Première recharge offerte",  check: true},
+          { text: "Assurance contre le vol", check: true},
+          { text: "Service de rappel d'entretien", check: true},
+          { text: "Nettoyage hebdomadaire", check: true },
+          { text: "Service de diagnostic à distance", check: true},
+          { text: "Service de remplissage du réservoir", check: true},
+          { text: "Service de réparation à domicile", check: true},
+          { text: "Entretien régulier", check: true},
+          { text: "Recharge d'hydrogène illimité", check: true},
         ],
       },
     ],
   };
 
+  let cb_buy = function() {
+    alert("merci pour votre achat")
+  }
+
   return (
     <>
+      <Pricing {...data/*, cb_buy*/}/>
     </>
   )
 }
