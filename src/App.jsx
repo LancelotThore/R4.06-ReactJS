@@ -13,7 +13,7 @@ function App() {
       "Découvrez l'avenir de la mobilité avec des prix compétitifs et des options d'achat flexibles chez Auto Innovation.",
     plans: [
       {
-        title: "Starter Package", price: "29 999.99",
+        label: "Starter Package", price: "29 999.99",
         advantages: [
           { text: "Assurance auto complémentaire", check: true},
           { text: "Première recharge offerte",  check: true},
@@ -28,7 +28,7 @@ function App() {
         ],
       },
       {
-        title: "Prenium Package",
+        label: "Premium Package",
         price: "35 999.99",
         advantages: [
           { text: "Assurance auto complémentaire", check: true},
@@ -44,7 +44,7 @@ function App() {
         ],
       },
       {
-        title: "Prestige Package",
+        label: "Prestige Package",
         price: "49 999.99",
         advantages: [
           { text: "Assurance auto complémentaire", check: true},

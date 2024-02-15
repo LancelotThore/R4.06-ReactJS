@@ -19,7 +19,7 @@ export default function Pricing({title, description, plans}) {
                 </div>
                 <div className="box">
                     {plans.map((plan, index) => (
-                        <Plan key={index} label={plan.name} price={plan.price} advantage={plan.advantage}/>
+                        <Plan key={index} label={plan.name} price={plan.price} advantages={plan.advantages}/>
                     ))}
                 </div>
             </div>

@@ -1,5 +1,5 @@
 function Item({text, check}) {
-    let checkmark = check ? "x" : '\u00A0\u00A0\u00A0';
+    let checkmark = check ? "✓" : '\u00A0\u00A0\u00A0';
     return (
         <li className="advantage">
             <span className="advantage__checkmark">{checkmark}</span>
