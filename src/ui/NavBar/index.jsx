@@ -12,6 +12,7 @@ export default function NavBar() {
     <div className="list-style-none me-auto flex flex-col ps-0 lg:flex-row text-white space-x-10">
   
         <div className="list-style-none me-auto flex flex-col ps-0 lg:flex-row text-white">
+          <a className="mb-4 lg:mb-0 lg:pe-2 text-[#BBA]" href="/">Home</a>
           <a className="mb-4 lg:mb-0 lg:pe-2 text-[#BBA]" href="/crash">Our Teams </a>
           <a className="mb-4 lg:mb-0 lg:pe-2 hover:text-[#BBA] focus:text-[#BB0]" href="/team/sales">Sales</a>
           <a className="mb-4 lg:mb-0 lg:pe-2 hover:text-[#BBA] focus:text-[#BB0]" href="/team/webdesign">Webdesign</a>
