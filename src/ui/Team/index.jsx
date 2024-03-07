@@ -1,6 +1,5 @@
 import Card from "./Card.jsx";
 
-
 export default function Team(team) {
   let employees = team.employees.map((employee) => {
     // console.log(index);
